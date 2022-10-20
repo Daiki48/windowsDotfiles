@@ -23,12 +23,17 @@ if (not status) then
   return
 end
 
-packer.startup(function(use)
+packer.startup({function(use)
   -- plugin manager
   use { 'wbthomason/packer.nvim', opt = true }
 
+  -- common utilities
+  use { 'nvim-lua/popup.nvim' }
+  use { 'nvim-lua/plenary.nvim' }
+  use { 'MunifTanjim/nui.nvim' }
+
   -- colorscheme
-  use { "EdenEast/nightfox.nvim" }
+  use { 'EdenEast/nightfox.nvim' }
 
   -- statusline
   use {
@@ -40,7 +45,6 @@ packer.startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    opt = true
   }
 
   -- brackets
@@ -49,4 +53,14 @@ packer.startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
 
-end)
+  -- LSP
+  use { 'neovim/nvim-lspconfig' }
+
+end,
+config = {
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'single' })
+    end
+  }
+}})
