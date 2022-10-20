@@ -4,8 +4,8 @@ vim.scriptencoding = 'utf-8'
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
 
--- vim.wo.number = true
--- vim.wo.relativenumber = true
+vim.wo.number = true
+vim.wo.relativenumber = true
 vim.wo.signcolumn = 'yes'
 
 vim.o.shell = 'pwsh'
