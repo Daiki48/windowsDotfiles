@@ -1,0 +1,2 @@
+require('daiki.base')
+
