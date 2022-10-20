@@ -24,7 +24,15 @@ if (not status) then
 end
 
 packer.startup(function(use)
-  use { 'wbthomason/packer.nvim' }
---   use { 'ellisonleao/gruvbox.nvim' }
-  use "EdenEast/nightfox.nvim"
+  -- plugin manager
+  use { 'wbthomason/packer.nvim', opt = true }
+
+  -- colorscheme
+  use { "EdenEast/nightfox.nvim" }
+
+  -- statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    reuqires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 end)
