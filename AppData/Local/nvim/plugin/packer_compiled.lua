@@ -80,8 +80,9 @@ _G.packer_plugins = {
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["packer.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    loaded = false,
+    needs_bufread = false,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   }
 }
