@@ -35,4 +35,18 @@ packer.startup(function(use)
     'nvim-lualine/lualine.nvim',
     reuqires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  -- treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    opt = true
+  }
+
+  -- brackets
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
 end)
