@@ -68,6 +68,10 @@ packer.startup({ function(use)
 	use { 'nvim-telescope/telescope.nvim' }
 	use { 'nvim-telescope/telescope-file-browser.nvim' }
 
+	-- git
+	use { 'lewis6991/gitsigns.nvim' }
+	use { 'dinhhuy258/git.nvim' }
+
 end,
 	config = {
 		display = {
