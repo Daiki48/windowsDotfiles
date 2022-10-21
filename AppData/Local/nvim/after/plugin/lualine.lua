@@ -60,9 +60,11 @@ lualine.setup {
   },
   sections = {
     lualine_a = {
-			{ vim_mode }
+			{ vim_mode },
+			'g:coc_status'
     },
     lualine_b = {
+			'g:coc_git_status',
       'branch',
 			{
 				'diff',
@@ -80,6 +82,7 @@ lualine.setup {
 			},
 			{
 				'diagnostics',
+				source = { coc },
 				diagnostics_color = {
 					error = {
 						fg = "#8f3231"
