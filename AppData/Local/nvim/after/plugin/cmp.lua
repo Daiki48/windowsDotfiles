@@ -43,9 +43,9 @@ vim.cmd [[
 -- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
-local keymap = vim.api.nvim_set_keymap
-keymap('i', '<expr> <Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', { noremap = true, silent = true })
-keymap('i', '<expr> <S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', { noremap = true, silent = true })
+-- local keymap = vim.api.nvim_set_keymap
+-- keymap('i', '<expr> <Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', { noremap = true, silent = true })
+-- keymap('i', '<expr> <S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', { noremap = true, silent = true })
 
 cmp.setup.cmdline('/', {
 	mapping = cmp.mapping.preset.cmdline(),
