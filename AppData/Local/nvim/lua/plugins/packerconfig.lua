@@ -34,7 +34,8 @@ packer.startup({ function(use)
 
 	-- colorscheme
 	-- use { 'EdenEast/nightfox.nvim' }
-	use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
+	-- use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
+	use { 'ellisonleao/gruvbox.nvim' }
 
 	-- statusline
 	use {
@@ -47,15 +48,21 @@ packer.startup({ function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate',
 	}
-
-	-- comment out
-	use { 'terrortylor/nvim-comment' }
+	use { 'yioneko/nvim-yati', requires = 'nvim-treesitter/nvim-treesitter' }
 
 	-- brackets
 	use {
 		'windwp/nvim-autopairs',
 		config = function() require("nvim-autopairs").setup {} end
 	}
+
+	use {
+		'windwp/nvim-ts-autotag',
+		config = function() require("nvim-ts-autotag").setup {} end
+	}
+
+	-- comment out
+	use { 'terrortylor/nvim-comment' }
 
 	-- LSP
 	use { 'neovim/nvim-lspconfig' }
