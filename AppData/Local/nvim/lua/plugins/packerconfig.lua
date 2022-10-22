@@ -33,7 +33,8 @@ packer.startup({ function(use)
 	use { 'MunifTanjim/nui.nvim' }
 
 	-- colorscheme
-	use { 'EdenEast/nightfox.nvim' }
+	-- use { 'EdenEast/nightfox.nvim' }
+	use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
 
 	-- statusline
 	use {
@@ -79,6 +80,9 @@ packer.startup({ function(use)
 	-- fzf, filer
 	use { 'nvim-telescope/telescope.nvim' }
 	use { 'nvim-telescope/telescope-file-browser.nvim' }
+
+	-- color
+	use { 'norcalli/nvim-colorizer.lua' }
 
 	-- git
 	use { 'lewis6991/gitsigns.nvim' }

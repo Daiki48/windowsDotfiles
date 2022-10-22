@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -89,10 +94,34 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-skkeleton"] = {
+    after_files = { "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-skkeleton\\after\\plugin\\cmp_skkeleton.lua" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-skkeleton",
+    url = "https://github.com/rinx/cmp-skkeleton"
+  },
   ["cmp-vsnip"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
+  ["coolnessFlair.vim"] = {
+    config = { "vim.cmd[[colorscheme coolnessFlair]]" },
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coolnessFlair.vim",
+    url = "https://github.com/Daiki48/coolnessFlair.vim"
+  },
+  ["denops.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\denops.vim",
+    url = "https://github.com/vim-denops/denops.vim"
+  },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
   },
   ["fidget.nvim"] = {
     loaded = true,
@@ -134,11 +163,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
-  },
   ["nui.nvim"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
@@ -159,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
     loaded = true,
@@ -191,6 +220,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  skkeleton = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\skkeleton",
+    url = "https://github.com/vim-skk/skkeleton"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
@@ -213,6 +247,16 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: coolnessFlair.vim
+time([[Config for coolnessFlair.vim]], true)
+vim.cmd[[colorscheme coolnessFlair]]
+time([[Config for coolnessFlair.vim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd skkeleton ]]
+vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd cmp-skkeleton ]]
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
