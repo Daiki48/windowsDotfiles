@@ -84,6 +84,31 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
+  ["git.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git.nvim",
+    url = "https://github.com/dinhhuy258/git.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
@@ -135,6 +160,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
@@ -170,6 +200,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 
