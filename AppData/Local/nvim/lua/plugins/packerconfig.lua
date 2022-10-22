@@ -100,6 +100,9 @@ packer.startup({ function(use)
 	-- notification
 	use { 'rcarriga/nvim-notify' }
 
+	use { 'simrat39/rust-tools.nvim' }
+	use { 'mfussenegger/nvim-dap' }
+
 end,
 	config = {
 		display = {
