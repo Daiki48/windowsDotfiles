@@ -4,6 +4,8 @@ vim.scriptencoding = 'utf-8'
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
 
+vim.g.mapleader = '<Space>'
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.signcolumn = 'yes'
