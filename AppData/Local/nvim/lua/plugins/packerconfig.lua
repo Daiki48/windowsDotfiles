@@ -56,6 +56,7 @@ packer.startup({ function(use)
 		config = function() require("nvim-autopairs").setup {} end
 	}
 
+	-- html tag
 	use {
 		'windwp/nvim-ts-autotag',
 		config = function() require("nvim-ts-autotag").setup {} end
@@ -93,9 +94,11 @@ packer.startup({ function(use)
 
 	-- git
 	use { 'lewis6991/gitsigns.nvim' }
-	use { 'dinhhuy258/git.nvim' }
-	use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-	use { 'sindrets/diffview.nvim' }
+	-- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+	-- use { 'sindrets/diffview.nvim' }
+
+	-- notification
+	use { 'rcarriga/nvim-notify' }
 
 end,
 	config = {
