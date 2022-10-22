@@ -31,5 +31,7 @@ vim.bo.autoindent = false
 vim.bo.smartindent = false
 vim.bo.autoread = true
 
+vim.o.background = "light" -- or "light" for light mode
+vim.cmd('syntax enable')
 vim.cmd 'set clipboard+=unnamedplus'
 vim.cmd 'set wildoptions=pum'
