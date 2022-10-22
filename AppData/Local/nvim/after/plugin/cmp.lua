@@ -23,9 +23,13 @@ cmp.setup({
 		{ name = 'buffer' },
 		{ name = 'path' },
 		{ name = 'vsnip' },
+		{ name = 'skkeleton' },
 	}),
 	formatting = {
 		format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+	},
+	view = {
+		entries = 'native'
 	}
 })
 
@@ -34,9 +38,14 @@ vim.cmd [[
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]
 
--- " Use <Tab> and <S-Tab> to navigate through popup menu
+-- Use <Tab> and <S-Tab> to navigate through popup menu
 -- inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 -- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
+local keymap = vim.api.nvim_set_keymap
+keymap('i', '<expr> <Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', { noremap = true, silent = true })
+keymap('i', '<expr> <S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', { noremap = true, silent = true })
 
 cmp.setup.cmdline('/', {
 	mapping = cmp.mapping.preset.cmdline(),

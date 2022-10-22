@@ -47,6 +47,9 @@ packer.startup({ function(use)
 		run = ':TSUpdate',
 	}
 
+	-- comment out
+	use { 'terrortylor/nvim-comment' }
+
 	-- brackets
 	use {
 		'windwp/nvim-autopairs',
@@ -55,14 +58,22 @@ packer.startup({ function(use)
 
 	-- LSP
 	use { 'neovim/nvim-lspconfig' }
-	use { 'onsails/lspkind-nvim' }
-	use { 'hrsh7th/cmp-buffer' }
-	use { 'hrsh7th/cmp-nvim-lsp' }
-	use { 'hrsh7th/nvim-cmp' }
 	use { 'jose-elias-alvarez/null-ls.nvim' }
 	use { 'williamboman/mason.nvim' }
 	use { 'williamboman/mason-lspconfig.nvim' }
+	use { 'hrsh7th/nvim-cmp' }
+	use { 'hrsh7th/cmp-buffer' }
+	use { 'hrsh7th/cmp-nvim-lsp' }
+	use { 'hrsh7th/cmp-path' }
+	use { 'hrsh7th/vim-vsnip' }
+	use { 'hrsh7th/cmp-vsnip' }
+	use { 'onsails/lspkind-nvim' }
 	use { 'glepnir/lspsaga.nvim' }
+	use { 'j-hui/fidget.nvim' }
+
+	-- skkeleton
+	use { 'vim-skk/skkeleton', requires = { 'vim-denops/denops.vim' } }
+	use { 'rinx/cmp-skkeleton', after = { 'nvim-cmp', 'skkeleton' } }
 
 	-- fzf, filer
 	use { 'nvim-telescope/telescope.nvim' }
