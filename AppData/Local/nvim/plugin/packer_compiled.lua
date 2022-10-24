@@ -183,6 +183,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
@@ -225,6 +230,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   skkeleton = {
     loaded = true,
     path = "C:\\Users\\daiki\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\skkeleton",
@@ -248,18 +258,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-ts-autotag
-time([[Config for nvim-ts-autotag]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
-time([[Config for nvim-ts-autotag]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-ts-autotag
+time([[Config for nvim-ts-autotag]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
+time([[Config for nvim-ts-autotag]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd skkeleton ]]
 vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd skkeleton ]]
 vim.cmd [[ packadd cmp-skkeleton ]]
 time([[Sequenced loading]], false)
 

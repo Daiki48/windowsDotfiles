@@ -99,7 +99,17 @@ packer.startup({ function(use)
 
 	-- notification
 	use { 'rcarriga/nvim-notify' }
+	use {
+		'folke/noice.nvim',
+		event = "VimEnter",
+		requires = {
+			'MunifTanjim/nui.nvim',
+			'rcarriga/nvim-notify',
+			'j-hui/fidget.nvim'
+		}
+	}
 
+	-- rust
 	use { 'simrat39/rust-tools.nvim' }
 	use { 'mfussenegger/nvim-dap' }
 
