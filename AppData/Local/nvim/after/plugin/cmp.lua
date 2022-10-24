@@ -17,6 +17,20 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true
 		}),
+		['<Tab>'] = function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end,
+		['<S-Tab'] = function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			else
+				fallback()
+			end
+		end,
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
@@ -47,12 +61,13 @@ vim.cmd [[
 -- keymap('i', '<expr> <Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', { noremap = true, silent = true })
 -- keymap('i', '<expr> <S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', { noremap = true, silent = true })
 
-cmp.setup.cmdline('/', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = 'buffer' } -- search source setting
-	}
-})
+-- cmp.setup.cmdline('/', {
+-- 	mapping = cmp.mapping.preset.cmdline(),
+-- 	sources = {
+-- 		{ name = 'buffer' } -- search source setting
+-- 	}
+-- })
+
 cmp.setup.cmdline(":", {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = {
