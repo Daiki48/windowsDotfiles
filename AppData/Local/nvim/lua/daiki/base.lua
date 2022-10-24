@@ -25,6 +25,7 @@ vim.o.updatetime = 300
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.cursorline = true
+vim.o.pumblend = 20
 
 vim.bo.expandtab = true
 vim.bo.autoindent = false
