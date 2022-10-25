@@ -80,6 +80,7 @@ packer.startup({ function(use)
 	use { 'glepnir/lspsaga.nvim' }
 	use { 'j-hui/fidget.nvim' }
 	use { 'L3MON4D3/LuaSnip' }
+	use { 'ray-x/lsp_signature.nvim' }
 
 	-- skkeleton
 	use { 'vim-skk/skkeleton', requires = { 'vim-denops/denops.vim' } }
@@ -120,4 +121,5 @@ end,
 				return require('packer.util').float({ border = 'single' })
 			end
 		}
-	} })
+	}
+})
