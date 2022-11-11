@@ -31,6 +31,8 @@ packer.startup({ function(use)
 	use { 'nvim-lua/popup.nvim' }
 	use { 'nvim-lua/plenary.nvim' }
 	use { 'MunifTanjim/nui.nvim' }
+	use { 'vim-denops/denops.vim' }
+	use { 'Shougo/pum.vim' }
 
 	-- colorscheme
 	-- use { 'EdenEast/nightfox.nvim' }
@@ -67,7 +69,7 @@ packer.startup({ function(use)
 
 	-- LSP
 	use { 'neovim/nvim-lspconfig' }
-	use { 'jose-elias-alvarez/null-ls.nvim' }
+	-- use { 'jose-elias-alvarez/null-ls.nvim' }
 	use { 'williamboman/mason.nvim' }
 	use { 'williamboman/mason-lspconfig.nvim' }
 	use { 'hrsh7th/nvim-cmp' }
@@ -76,15 +78,25 @@ packer.startup({ function(use)
 	use { 'hrsh7th/cmp-path' }
 	use { 'hrsh7th/vim-vsnip' }
 	use { 'hrsh7th/cmp-vsnip' }
-	use { 'onsails/lspkind-nvim' }
+
+	-- use { 'Shougo/ddc.vim', requires = { 'Shougo/pum.vim' } }
+	-- use { 'Shougo/ddc-ui-native', after = { 'ddc.vim' } }
+	-- use { 'Shougo/ddc-source-around', after = { 'ddc.vim' } }
+	-- use { 'Shougo/ddc-matcher_head', after = { 'ddc.vim' } }
+	-- use { 'Shougo/ddc-sorter_rank', after = { 'ddc.vim' } }
+
+
+	use { 'onsails/lspkind.nvim' }
 	use { 'glepnir/lspsaga.nvim' }
 	use { 'j-hui/fidget.nvim' }
 	use { 'L3MON4D3/LuaSnip' }
 	use { 'ray-x/lsp_signature.nvim' }
 
 	-- skkeleton
-	use { 'vim-skk/skkeleton', requires = { 'vim-denops/denops.vim' } }
-	use { 'rinx/cmp-skkeleton', after = { 'nvim-cmp', 'skkeleton' } }
+	-- use { 'vim-skk/skkeleton', requires = { 'vim-denops/denops.vim' } }
+	-- use { 'rinx/cmp-skkeleton', after = { 'nvim-cmp', 'skkeleton' } }
+
+	use { 'Daiki48/hello-daiki', opt = true, requires = { 'vim-denops/denops.vim' } }
 
 	-- fzf, filer
 	use { 'nvim-telescope/telescope.nvim' }
@@ -95,11 +107,8 @@ packer.startup({ function(use)
 
 	-- git
 	use { 'lewis6991/gitsigns.nvim' }
-	-- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-	-- use { 'sindrets/diffview.nvim' }
 
 	-- notification
-	use { 'rcarriga/nvim-notify' }
 	use {
 		'folke/noice.nvim',
 		event = "VimEnter",
