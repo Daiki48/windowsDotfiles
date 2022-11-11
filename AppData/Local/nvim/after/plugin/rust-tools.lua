@@ -10,4 +10,19 @@ rt.setup({
 			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
 		end,
 	},
+	tools = {
+		hover_actions = {
+			border = {
+				{ '╭', 'NormalFloat' },
+				{ '─', 'NormalFloat' },
+				{ '╮', 'NormalFloat' },
+				{ '│', 'NormalFloat' },
+				{ '╯', 'NormalFloat' },
+				{ '─', 'NormalFloat' },
+				{ '╰', 'NormalFloat' },
+				{ '│', 'NormalFloat' },
+			},
+			-- auto_focus = true,
+		},
+	}
 })
