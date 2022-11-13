@@ -71,10 +71,28 @@ nvim_lsp.flow.setup {
 }
 
 nvim_lsp.tsserver.setup {
+	root_dir = nvim_lsp.util.root_pattern("package.json"),
 	on_attach = on_attach,
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 	cmd = { "typescript-language-server", "--stdio" },
 	capabilities = capabilities
+}
+
+nvim_lsp.denols.setup {
+	root_dir = nvim_lsp.util.root_pattern("deno.json"),
+	init_options = {
+		lint = true,
+		unstable = true,
+		suggest = {
+			imports = {
+				hosts = {
+					["https://deno.land"] = true,
+					["https://cdn.nest.land"] = true,
+					["https://crux.land"] = true,
+				},
+			},
+		},
+	},
 }
 
 nvim_lsp.sourcekit.setup {
@@ -120,6 +138,11 @@ nvim_lsp.astro.setup {
 }
 
 nvim_lsp.rust_analyzer.setup {
+	on_attach = on_attach,
+	capabilities = capabilities
+}
+
+nvim_lsp.clangd.setup {
 	on_attach = on_attach,
 	capabilities = capabilities
 }
