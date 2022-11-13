@@ -80,3 +80,9 @@ vim.keymap.set("n", ";fj", function()
 		layout_config = { height = 40 }
 	})
 end)
+
+-- vim.api.nvim_create_augroup('transparency', {})
+-- vim.api.nvim_create_autocmd({ ';ff' }, {
+-- 	group = 'transparency',
+-- 	command = "lua require('telescope.buitin').find_files()",
+-- })
