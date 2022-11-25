@@ -36,8 +36,8 @@ packer.startup({ function(use)
 
 	-- colorscheme
 	-- use { 'EdenEast/nightfox.nvim' }
-	-- use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
-	use { 'ellisonleao/gruvbox.nvim' }
+	use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
+	-- use { 'ellisonleao/gruvbox.nvim' }
 
 	-- statusline
 	use {
