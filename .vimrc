@@ -15,17 +15,7 @@ set visualbell
 set showmatch
 
 " statusline
-set statusline=%F
-set statusline=%m
-set statusline=%r
-set statusline=%h
-
-set statusline+=%w
-
-set statusline+=[ENC=%{&fileencoding}]
-set statusline+=[ROW=%l/%L]
-set statusline+=[COL=%c]
-
+set statusline=%t%=[%{&fileencoding}][%l/%L][%c][%p]
 set laststatus=2
 
 syntax enable
