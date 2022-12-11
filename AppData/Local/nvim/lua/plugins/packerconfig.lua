@@ -32,7 +32,7 @@ packer.startup({ function(use)
 	use { 'nvim-lua/plenary.nvim' }
 	use { 'MunifTanjim/nui.nvim' }
 	use { 'vim-denops/denops.vim' }
-	use { 'Shougo/pum.vim' }
+	-- use { 'Shougo/pum.vim' }
 
 	-- colorscheme
 	-- use { 'EdenEast/nightfox.nvim' }
@@ -109,18 +109,18 @@ packer.startup({ function(use)
 	use { 'lewis6991/gitsigns.nvim' }
 
 	-- notification
-	use {
-		'folke/noice.nvim',
-		event = "VimEnter",
-		requires = {
-			'MunifTanjim/nui.nvim',
-			'rcarriga/nvim-notify',
-			'j-hui/fidget.nvim'
-		}
-	}
+	-- use {
+	--   'folke/noice.nvim',
+	--   event = "VimEnter",
+	--   requires = {
+	--     'MunifTanjim/nui.nvim',
+	--     'rcarriga/nvim-notify',
+	--     'j-hui/fidget.nvim'
+	--   }
+	-- }
 
 	-- rust
-	use { 'simrat39/rust-tools.nvim' }
+	use { 'simrat39/rust-tools.nvim', ft = { "rust" } }
 	use { 'mfussenegger/nvim-dap' }
 
 end,
