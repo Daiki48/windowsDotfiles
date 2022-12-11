@@ -42,7 +42,13 @@ packer.startup({ function(use)
 	-- statusline
 	use {
 		'nvim-lualine/lualine.nvim',
-		reuqires = { 'nvim-tree/nvim-web-devicons', opt = true }
+		-- event = { 'BufRead' },
+		reuqires = { 'nvim-tree/nvim-web-devicons', opt = true, module = { 'nvim-web-devicons' } },
+		-- タブやステータスラインを消すとき
+		-- setup = function()
+		-- 	vim.opt.laststatus = 0
+		-- 	vim.opt.showtabline = 0
+		-- end
 	}
 
 	-- treesitter
