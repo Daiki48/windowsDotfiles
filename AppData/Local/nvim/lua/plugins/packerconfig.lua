@@ -72,12 +72,25 @@ packer.startup({ function(use)
 	-- use { 'jose-elias-alvarez/null-ls.nvim' }
 	use { 'williamboman/mason.nvim' }
 	use { 'williamboman/mason-lspconfig.nvim' }
-	use { 'hrsh7th/nvim-cmp' }
-	use { 'hrsh7th/cmp-buffer' }
-	use { 'hrsh7th/cmp-nvim-lsp' }
-	use { 'hrsh7th/cmp-path' }
-	use { 'hrsh7th/vim-vsnip' }
-	use { 'hrsh7th/cmp-vsnip' }
+
+	use {
+		'hrsh7th/nvim-cmp',
+		module = { "cmp" },
+		requires = {
+			{ "hrsh7th/cmp-buffer", event = { "InsertEnter" } },
+			{ "hrsh7th/cmp-nvim-lsp", event = { "InsertEnter" } },
+			{ "hrsh7th/cmp-path", event = { "InsertEnter" } },
+			{ "hrsh7th/vim-vsnip", event = { "InsertEnter" } },
+			{ "hrsh7th/cmp-vsnip", event = { "InsertEnter" } },
+		}
+	}
+
+	-- use { 'hrsh7th/nvim-cmp' }
+	-- use { 'hrsh7th/cmp-buffer' }
+	-- use { 'hrsh7th/cmp-nvim-lsp' }
+	-- use { 'hrsh7th/cmp-path' }
+	-- use { 'hrsh7th/vim-vsnip' }
+	-- use { 'hrsh7th/cmp-vsnip' }
 
 	-- use { 'Shougo/ddc.vim', requires = { 'Shougo/pum.vim' } }
 	-- use { 'Shougo/ddc-ui-native', after = { 'ddc.vim' } }
