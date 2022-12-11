@@ -85,13 +85,6 @@ packer.startup({ function(use)
 		}
 	}
 
-	-- use { 'hrsh7th/nvim-cmp' }
-	-- use { 'hrsh7th/cmp-buffer' }
-	-- use { 'hrsh7th/cmp-nvim-lsp' }
-	-- use { 'hrsh7th/cmp-path' }
-	-- use { 'hrsh7th/vim-vsnip' }
-	-- use { 'hrsh7th/cmp-vsnip' }
-
 	-- use { 'Shougo/ddc.vim', requires = { 'Shougo/pum.vim' } }
 	-- use { 'Shougo/ddc-ui-native', after = { 'ddc.vim' } }
 	-- use { 'Shougo/ddc-source-around', after = { 'ddc.vim' } }
@@ -112,8 +105,17 @@ packer.startup({ function(use)
 	use { 'Daiki48/hello-daiki', opt = true, requires = { 'vim-denops/denops.vim' } }
 
 	-- fzf, filer
-	use { 'nvim-telescope/telescope.nvim' }
-	use { 'nvim-telescope/telescope-file-browser.nvim' }
+	use {
+		'nvim-telescope/telescope.nvim',
+		module = { 'telescope' },
+		requires = {
+			{ 'nvim-telescope/telescope-file-browser.nvim', opt = true }
+		},
+		wants = { 'telescope-file-browser.nvim' }
+	}
+
+	-- use { 'nvim-telescope/telescope.nvim' }
+	-- use { 'nvim-telescope/telescope-file-browser.nvim' }
 
 	-- color
 	use { 'norcalli/nvim-colorizer.lua' }
