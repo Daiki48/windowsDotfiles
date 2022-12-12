@@ -13,6 +13,19 @@ end
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
+local function border(hl_name)
+	return {
+		{ "╭", hl_name },
+		{ "─", hl_name },
+		{ "╮", hl_name },
+		{ "│", hl_name },
+		{ "╯", hl_name },
+		{ "─", hl_name },
+		{ "╰", hl_name },
+		{ "│", hl_name },
+	}
+end
+
 local icons = {
 	Text          = ' ',
 	Method        = ' ',
@@ -55,9 +68,11 @@ end
 local options = {
 	window = {
 		completion = {
+			border = border "CmpBorder",
 			winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
 		},
 		documentation = {
+			border = border "CmpDocBorder",
 			winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 		},
 	},
