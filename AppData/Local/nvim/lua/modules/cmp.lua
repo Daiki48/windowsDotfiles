@@ -15,13 +15,13 @@ require("luasnip.loaders.from_vscode").lazy_load()
 
 local function border(hl_name)
 	return {
-		{ "╭", hl_name },
+		{ "●", hl_name }, -- left top
 		{ "─", hl_name },
-		{ "╮", hl_name },
+		{ "●", hl_name }, -- right top
 		{ "│", hl_name },
-		{ "╯", hl_name },
+		{ "●", hl_name }, -- right bottom
 		{ "─", hl_name },
-		{ "╰", hl_name },
+		{ "●", hl_name }, -- left bottom
 		{ "│", hl_name },
 	}
 end
@@ -31,8 +31,8 @@ local icons = {
 	Method        = ' ',
 	Function      = ' ',
 	Constructor   = ' ',
-	Field         = '識',
-	Variable      = '𝑋 ',
+	Field         = 'ﰠ ',
+	Variable      = ' ',
 	Class         = ' ',
 	Interface     = ' ',
 	Module        = ' ',
@@ -50,7 +50,7 @@ local icons = {
 	Constant      = ' ',
 	Struct        = ' ',
 	Event         = ' ',
-	Operator      = 'ﬦ',
+	Operator      = 'ﬦ ',
 	TypeParameter = ' ',
 }
 
@@ -168,7 +168,6 @@ local options = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(_, vim_item)
 			vim_item.kind = icons[vim_item.kind]
-			-- vim_item.ind = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
 			vim_item.menu = ({
 				nvim_lsp = "",
 				nvim_lua = "",
