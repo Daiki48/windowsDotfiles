@@ -31,8 +31,7 @@ packer.startup({ function(use)
 	use { 'nvim-lua/popup.nvim' }
 	use { 'nvim-lua/plenary.nvim' }
 	use { 'MunifTanjim/nui.nvim' }
-	use { 'vim-denops/denops.vim' }
-	-- use { 'Shougo/pum.vim' }
+	-- use { 'vim-denops/denops.vim' }
 
 	-- colorscheme
 	-- use { 'EdenEast/nightfox.nvim' }
@@ -68,7 +67,7 @@ packer.startup({ function(use)
 	-- html tag
 	use {
 		'windwp/nvim-ts-autotag',
-		event = { "InsertEnter" },
+		ft = { "html", "typescriptreact" },
 		config = function() require("nvim-ts-autotag").setup {} end
 	}
 
@@ -97,7 +96,7 @@ packer.startup({ function(use)
 		end,
 	})
 
-	-- use { 'onsails/lspkind.nvim' }
+	use { 'onsails/lspkind.nvim' }
 	use({
 		'glepnir/lspsaga.nvim',
 		event = { "BufRead" },
@@ -106,7 +105,6 @@ packer.startup({ function(use)
 		end
 	})
 	use { 'j-hui/fidget.nvim' }
-	-- use { 'L3MON4D3/LuaSnip' }
 	use { 'ray-x/lsp_signature.nvim' }
 
 	-- skkeleton
@@ -153,7 +151,13 @@ packer.startup({ function(use)
 	use { 'norcalli/nvim-colorizer.lua' }
 
 	-- git
-	use { 'lewis6991/gitsigns.nvim' }
+	use({
+		'lewis6991/gitsigns.nvim',
+		event = { "BufRead" },
+		config = function()
+			require("modules.gitsigns")
+		end
+	})
 
 	-- notification
 	-- use {
