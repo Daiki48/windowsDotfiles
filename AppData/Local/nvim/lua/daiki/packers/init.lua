@@ -97,8 +97,14 @@ packer.startup({ function(use)
 		end,
 	})
 
-	use { 'onsails/lspkind.nvim' }
-	use { 'glepnir/lspsaga.nvim' }
+	-- use { 'onsails/lspkind.nvim' }
+	use({
+		'glepnir/lspsaga.nvim',
+		event = { "BufRead" },
+		config = function()
+			require("modules.lspsaga")
+		end
+	})
 	use { 'j-hui/fidget.nvim' }
 	-- use { 'L3MON4D3/LuaSnip' }
 	use { 'ray-x/lsp_signature.nvim' }
