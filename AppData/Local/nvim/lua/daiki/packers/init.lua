@@ -33,9 +33,19 @@ packer.startup({ function(use)
 	use { 'MunifTanjim/nui.nvim' }
 
 	-- colorscheme
-	-- use { 'EdenEast/nightfox.nvim' }
+	-- use({
+	-- 	'EdenEast/nightfox.nvim',
+	-- 	config = function ()
+	-- 		require("color_scheme.nightfox")
+	-- 	end
+	-- })
 	use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
-	-- use { 'ellisonleao/gruvbox.nvim' }
+	-- use({
+	-- 	'ellisonleao/gruvbox.nvim',
+	-- 	config = function ()
+	-- 		require("color_scheme.gruvbox")
+	-- 	end
+	-- })
 
 	-- statusline
 	use {
