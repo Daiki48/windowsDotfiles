@@ -1,14 +1,19 @@
--- local status, packer = pcall(require, 'packer')
--- if (not status) then
--- 	print("Packer is not installed")
--- 	return
--- end
-
 local packer = nil
 local function init()
 	if packer == nil then
 		packer = require("packer")
-		packer.init({ disable_commands = true })
+		packer.init({
+			disable_commands = true,
+			display = {
+				open_fn = function()
+					return require('packer.util').float({ border = 'single' })
+				end
+			},
+			profile = {
+				enable = true,
+				threshold = 1,
+			}
+		})
 	end
 	local use = packer.use
 	packer.reset()
