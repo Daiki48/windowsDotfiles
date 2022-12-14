@@ -25,8 +25,6 @@ local function init()
 				enable = true,
 				threshold = 1,
 			},
-			-- auto_clean = true,
-			-- compile_on_sync = true,
 		})
 	end
 	local use = packer.use
@@ -59,7 +57,11 @@ local function init()
 	use {
 		'nvim-lualine/lualine.nvim',
 		-- event = { 'BufRead' },
-		reuqires = { 'nvim-tree/nvim-web-devicons', opt = true, module = { 'nvim-web-devicons' } },
+		reuqires = {
+			'nvim-tree/nvim-web-devicons',
+			opt = true,
+			module = { 'nvim-web-devicons' }
+		},
 		-- タブやステータスラインを消すとき
 		-- setup = function()
 		-- 	vim.opt.laststatus = 0
@@ -98,19 +100,52 @@ local function init()
 		end
 	})
 	-- use { 'jose-elias-alvarez/null-ls.nvim' }
-	use { 'williamboman/mason.nvim' }
-	use { 'williamboman/mason-lspconfig.nvim' }
+	use({
+		'williamboman/mason.nvim',
+		event = { "VimEnter" },
+		requires = {
+			{ 'williamboman/mason-lspconfig.nvim' }
+		},
+		config = function()
+			require("modules.mason")
+		end
+	})
 
+	-- ******** opt config ********
+	-- use({
+	-- 	'hrsh7th/nvim-cmp',
+	-- 	module = { "cmp" },
+	-- 	requires = {
+	-- 		{ "hrsh7th/cmp-buffer", event = { "InsertEnter" } },
+	-- 		{ "hrsh7th/cmp-nvim-lsp", event = { "InsertEnter" } },
+	-- 		{ "hrsh7th/cmp-path", event = { "InsertEnter" } },
+	-- 		{ "hrsh7th/vim-vsnip", event = { "InsertEnter" } },
+	-- 		{ "hrsh7th/cmp-vsnip", event = { "InsertEnter" } },
+	-- 		{ "L3MON4D3/LuaSnip", event = { "InsertEnter" } },
+	-- 	},
+	-- 	config = function()
+	-- 		require("modules.cmp")
+	-- 	end,
+	-- })
+
+	-- ******** start config ********
 	use({
 		'hrsh7th/nvim-cmp',
-		module = { "cmp" },
 		requires = {
-			{ "hrsh7th/cmp-buffer", event = { "InsertEnter" } },
-			{ "hrsh7th/cmp-nvim-lsp", event = { "InsertEnter" } },
-			{ "hrsh7th/cmp-path", event = { "InsertEnter" } },
-			{ "hrsh7th/vim-vsnip", event = { "InsertEnter" } },
-			{ "hrsh7th/cmp-vsnip", event = { "InsertEnter" } },
-			{ "L3MON4D3/LuaSnip", event = { "InsertEnter" } },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/vim-vsnip" },
+			{ "hrsh7th/cmp-vsnip" },
+			{ "L3MON4D3/LuaSnip" },
+		},
+		wants = {
+			"cmp-buffer",
+			"cmp-nvim-lsp",
+			"cmp-path",
+			"vim-vsnip",
+			"cmp-vsnip",
+			"LuaSnip"
 		},
 		config = function()
 			require("modules.cmp")
