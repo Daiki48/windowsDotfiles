@@ -1,3 +1,15 @@
+local fn = vim.fn
+
+local top_path = fn.stdpath "config" -- ~\AppData\Local\nvim
+local compiled_filename = "packer_compiled.lua"
+local compile_dir = top_path .. "\\plugin\\"
+local compiled_file_path = compile_dir .. compiled_filename
+
+if fn.empty(fn.glob(compile_dir)) < 1 then
+	fn.delete(compiled_file_path, 'rf')
+	print("Delete compile file!")
+end
+
 local packer = nil
 local function init()
 	if packer == nil then
@@ -12,7 +24,9 @@ local function init()
 			profile = {
 				enable = true,
 				threshold = 1,
-			}
+			},
+			-- auto_clean = true,
+			-- compile_on_sync = true,
 		})
 	end
 	local use = packer.use
@@ -197,15 +211,3 @@ local plugins = setmetatable({}, {
 })
 
 return plugins
-
--- config = {
--- 	display = {
--- 		open_fn = function()
--- 			return require('packer.util').float({ border = 'single' })
--- 		end
--- 	},
--- 	profile = {
--- 		enable = true,
--- 		threshold = 1,
--- 	}
--- }
