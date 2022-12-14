@@ -111,7 +111,7 @@ local function init()
 		end
 	})
 
-	-- ******** opt config ********
+	-- ******** nvim-cmp opt config ********
 	-- use({
 	-- 	'hrsh7th/nvim-cmp',
 	-- 	module = { "cmp" },
@@ -128,7 +128,7 @@ local function init()
 	-- 	end,
 	-- })
 
-	-- ******** start config ********
+	-- ******** nvim-cmp start config ********
 	use({
 		'hrsh7th/nvim-cmp',
 		requires = {
@@ -188,33 +188,13 @@ local function init()
 	-- fzf, filer
 	use({
 		'nvim-telescope/telescope.nvim',
-		-- module = { 'telescope' },
-		-- event = { "BufEnter" },
+		keys = {
+			{ "n", "ff" }
+		},
 		requires = {
 			{ 'nvim-telescope/telescope-file-browser.nvim' },
 			{ 'nvim-tree/nvim-web-devicons', opt = true, module = { 'nvim-web-devicons' } },
 		},
-		-- wants = { 'telescope-file-browser.nvim' },
-		-- setup = function()
-		-- 	-- local function builtin(name)
-		-- 	-- 	return function(opt)
-		-- 	-- 		return function()
-		-- 	-- 			return require("telescope.builtin")[name](opt or {})
-		-- 	-- 		end
-		-- 	-- 	end
-		-- 	-- end
-		-- 	local function extensions(name, prop)
-		-- 		return function(opt)
-		-- 			return function()
-		-- 				local telescope = require "telescope"
-		-- 				telescope.load_extension(name)
-		-- 				return telescope.extensions[name][prop](opt or {})
-		-- 			end
-		-- 		end
-		-- 	end
-		--
-		-- 	vim.keymap.set("n", ";fj", extensions("file_browser", "file_browser"))
-		-- end,
 		config = function()
 			require("modules.telescope")
 		end
