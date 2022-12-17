@@ -45,13 +45,13 @@ local function init()
 	-- 		require("color_scheme.nightfox")
 	-- 	end
 	-- })
-	-- use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
-	use({
-		'ellisonleao/gruvbox.nvim',
-		config = function()
-			require("color_scheme.gruvbox")
-		end
-	})
+	use { 'Daiki48/coolnessFlair.vim', config = 'vim.cmd[[colorscheme coolnessFlair]]' }
+	-- use({
+	-- 	'ellisonleao/gruvbox.nvim',
+	-- 	config = function()
+	-- 		require("color_scheme.gruvbox")
+	-- 	end
+	-- })
 
 	-- statusline
 	use {
@@ -215,6 +215,9 @@ local function init()
 	-- rust
 	use { 'simrat39/rust-tools.nvim', opt = true, ft = { "rust" } }
 	use { 'mfussenegger/nvim-dap' }
+
+	-- development
+	use { 'D:\\projects\\vim-plugin-dev\\greeting.nvim' }
 
 end
 
