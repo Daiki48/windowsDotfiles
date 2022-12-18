@@ -54,7 +54,7 @@ local function init()
 	-- })
 
 	-- statusline
-	use {
+	use ({
 		'nvim-lualine/lualine.nvim',
 		-- event = { 'BufRead' },
 		reuqires = {
@@ -62,16 +62,20 @@ local function init()
 			opt = true,
 			module = { 'nvim-web-devicons' }
 		},
+		config = function()
+			require("modules.lualine")
+		end
 		-- タブやステータスラインを消すとき
 		-- setup = function()
 		-- 	vim.opt.laststatus = 0
 		-- 	vim.opt.showtabline = 0
 		-- end
-	}
+	})
 
 	-- treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
+		event = {'BufRead'},
 		run = ':TSUpdate',
 	}
 
@@ -96,7 +100,7 @@ local function init()
 		'neovim/nvim-lspconfig',
 		event = { "VimEnter" },
 		config = function()
-			require("modules.lspconfig")
+			require("modules.nvim-lspconfig")
 		end
 	})
 	-- use { 'jose-elias-alvarez/null-ls.nvim' }
@@ -160,6 +164,7 @@ local function init()
 			require("modules.lspsaga")
 		end
 	})
+
 	use({
 		'j-hui/fidget.nvim',
 		event = { "BufRead" },
@@ -167,6 +172,7 @@ local function init()
 			require("modules.fidget")
 		end
 	})
+
 	use({
 		'ray-x/lsp_signature.nvim',
 		event = { "BufRead" },
@@ -201,7 +207,10 @@ local function init()
 	})
 
 	-- color
-	use { 'norcalli/nvim-colorizer.lua' }
+	use ({
+		'norcalli/nvim-colorizer.lua',
+		event = {'BufRead'},
+	})
 
 	-- git
 	use({
