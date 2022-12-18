@@ -15,25 +15,22 @@ repo = 'wsdjeg/dein-ui.vim'
 
 [[plugins]]
 repo = 'ellisonleao/gruvbox.nvim'
-lua_source = '''
+lua_add = '''
 require('color_scheme.gruvbox')
 '''
 
 [[plugins]]
 repo = 'nvim-lualine/lualine.nvim'
 depends = ['nvim-tree/nvim-web-devicons']
-lua_source = '''require('modules.lualine')'''
-
-# [[plugins]]
-# repo = 'MunifTanjim/nui.nvim'
+lua_add = '''require('modules.lualine')'''
 
 [[plugins]]
 repo = 'terrortylor/nvim-comment'
-lua_source = '''require('modules.nvim-comment')'''
+lua_add = '''require('modules.nvim-comment')'''
 
 [[plugins]]
 repo = 'williamboman/mason.nvim'
-lua_source = '''require('modules.mason')'''
+lua_add = '''require('modules.mason')'''
 
 [[plugins]]
 repo = 'williamboman/mason-lspconfig.nvim'
