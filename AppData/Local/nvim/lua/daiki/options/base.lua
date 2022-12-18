@@ -26,6 +26,9 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.cursorline = true
 vim.o.pumblend = 20
+vim.o.clipboard = 'unnamedplus'
+vim.o.swapfile = false
+vim.o.backup = false
 
 vim.bo.expandtab = true
 vim.bo.autoindent = false
@@ -33,6 +36,6 @@ vim.bo.smartindent = false
 vim.bo.autoread = true
 
 vim.o.background = "dark" -- "dark" or "light" for light mode
-vim.cmd('syntax enable')
-vim.cmd 'set clipboard+=unnamedplus'
+-- vim.cmd 'syntax enable'
+-- vim.cmd 'syntax on'
 vim.cmd 'set wildoptions=pum'
