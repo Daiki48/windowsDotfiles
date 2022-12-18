@@ -1,0 +1,42 @@
+## *************************** ## 
+##         lazy plugin         ##
+## *************************** ##
+[[plugins]]
+repo = 'j-hui/fidget.nvim'
+on_event = ['BufRead']
+lua_source = '''require('modules.fidget')'''
+
+[[plugins]]
+repo = 'ray-x/lsp_signature.nvim'
+on_event = ['BufRead']
+on_source = 'neovim/nvim-lspconfig'
+lua_source = '''require('modules.lsp_signature')'''
+
+[[plugins]]
+repo = 'glepnir/lspsaga.nvim'
+on_event = ['BufRead']
+lua_source = '''require('modules.lspsaga')'''
+
+[[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+on_event = ['BufRead']
+lua_source = '''require('modules.gitsigns')'''
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+on_event = ['InsertEnter']
+lua_source = '''require('modules.nvim-autopairs')'''
+
+# [[plugins]]
+# repo = 'lambdalisue/fern.vim'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+on_event = ['BufRead']
+hook_post_update = 'TSUpdate'
+lua_source = '''require('modules.treesitter')'''
+
+[[plugins]]
+repo = 'norcalli/nvim-colorizer.lua'
+on_event = ['FileType']
+lua_source = '''require('modules.colorizer')'''

@@ -1,0 +1,27 @@
+## ----------------------------- ##
+##      telescope config         ##
+## ----------------------------- ##
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+depends = [
+  'popup.nvim',
+  'plenary.nvim',
+  'nvim-web-devicons',
+]
+on_event = ['VimEnter']
+## on_cmd = 'Telescope'
+lua_source = '''require('modules.telescope')'''
+
+[[plugins]]
+repo = 'nvim-telescope/telescope-file-browser.nvim'
+on_source = 'telescope.nvim'
+
+[[plugins]]
+repo = 'nvim-lua/popup.nvim'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+
