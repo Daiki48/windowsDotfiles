@@ -22,6 +22,7 @@ local dein_toml_lazy = dein_toml_dir .. '/lazy.toml'
 local dein_toml_telescope = dein_toml_dir .. '/telescope.toml'
 local dein_toml_cmp = dein_toml_dir .. '/cmp.toml'
 local dein_toml_lspconfig = dein_toml_dir .. '/lspconfig.toml'
+local dein_toml_noice = dein_toml_dir .. '/noice.toml'
 
 vim.call('dein#begin', dein_dir)
 
@@ -30,6 +31,7 @@ vim.call('dein#load_toml', dein_toml_lazy, { lazy = 1 })
 vim.call('dein#load_toml', dein_toml_telescope, { lazy = 1 })
 vim.call('dein#load_toml', dein_toml_cmp, { lazy = 1 })
 vim.call('dein#load_toml', dein_toml_lspconfig, { lazy = 1 })
+vim.call('dein#load_toml', dein_toml_noice, { lazy = 1 })
 
 vim.call('dein#end')
 vim.call('dein#save_state')
