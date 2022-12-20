@@ -27,8 +27,10 @@ repo = 'windwp/nvim-autopairs'
 on_event = ['InsertEnter']
 lua_source = '''require('modules.nvim-autopairs')'''
 
-# [[plugins]]
-# repo = 'lambdalisue/fern.vim'
+[[plugins]]
+repo = 'windwp/nvim-ts-autotag'
+on_source = 'nvim-treesitter'
+lua_source = '''require('modules.nvim-ts-autotag')'''
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
@@ -40,3 +42,7 @@ lua_source = '''require('modules.treesitter')'''
 repo = 'norcalli/nvim-colorizer.lua'
 on_event = ['FileType']
 lua_source = '''require('modules.colorizer')'''
+
+[[plugins]]
+repo = 'jlcrochet/vim-razor'
+on_ft = ['razor']
