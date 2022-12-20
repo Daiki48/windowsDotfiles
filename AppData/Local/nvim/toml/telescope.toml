@@ -3,13 +3,9 @@
 ## ----------------------------- ##
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
-depends = [
-  'popup.nvim',
-  'plenary.nvim',
-  'nvim-web-devicons',
-]
+depends = ['popup.nvim', 'plenary.nvim', 'nvim-web-devicons']
 on_event = ['VimEnter']
-## on_cmd = 'Telescope'
+on_cmd = 'Telescope'
 lua_source = '''require('modules.telescope')'''
 
 [[plugins]]
