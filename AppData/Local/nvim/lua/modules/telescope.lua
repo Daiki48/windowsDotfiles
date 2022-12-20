@@ -49,8 +49,8 @@ telescope.load_extension("file_browser")
 vim.keymap.set('n', ';ff',
 	function()
 		builtin.find_files({
-			no_ignore = false,
-			hidden = true
+			-- no_ignore = false,
+			-- hidden = true
 		})
 	end)
 vim.keymap.set('n', ';r', function()
@@ -73,7 +73,7 @@ vim.keymap.set("n", ";fj", function()
 		path = "%:p:h",
 		cwd = telescope_buffer_dir(),
 		respect_gitignore = false,
-		hidden = true,
+		-- hidden = true,
 		grouped = true,
 		previewer = false,
 		initial_mode = "normal",
