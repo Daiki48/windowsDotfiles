@@ -1,0 +1,29 @@
+## ---------------------------------- ##
+##             ddu config             ##
+## ---------------------------------- ##
+
+## ++++++++++++++++++++++++++++++++++ ##
+##   denops.vim reads in lazy.toml    ##
+## ++++++++++++++++++++++++++++++++++ ##
+
+[[plugins]]
+repo = 'Shougo/ddu.vim'
+depends = 'denops.vim'
+# on_source = 'denops.vim'
+lua_source = '''require('modules.ddu')'''
+
+[[plugins]]
+repo = 'Shougo/ddu-ui-ff'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file_rec'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-matcher_substring'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-kind-file'
+on_source = 'ddu.vim'
