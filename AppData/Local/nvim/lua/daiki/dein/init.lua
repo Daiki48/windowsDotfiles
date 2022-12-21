@@ -33,7 +33,7 @@ vim.call('dein#load_toml', dein_toml_telescope, { lazy = 1 })
 vim.call('dein#load_toml', dein_toml_cmp, { lazy = 1 })
 vim.call('dein#load_toml', dein_toml_lspconfig, { lazy = 1 })
 vim.call('dein#load_toml', dein_toml_noice, { lazy = 1 })
-vim.call ('dein#load_toml', dein_toml_ddu, { lazy = 1 })
+vim.call('dein#load_toml', dein_toml_ddu, { lazy = 1 })
 
 vim.call('dein#end')
 vim.call('dein#save_state')
