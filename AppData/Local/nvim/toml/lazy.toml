@@ -46,3 +46,11 @@ lua_source = '''require('modules.colorizer')'''
 [[plugins]]
 repo = 'jlcrochet/vim-razor'
 on_ft = ['razor']
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+on_event = ['VimEnter']
+
+[[plugins]]
+repo = 'vim-denops/denops-helloworld.vim'
+on_cmd = 'DenopsHello'
