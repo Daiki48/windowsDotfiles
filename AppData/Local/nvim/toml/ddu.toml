@@ -9,7 +9,8 @@
 [[plugins]]
 repo = 'Shougo/ddu.vim'
 depends = 'denops.vim'
-# on_source = 'denops.vim'
+on_source = 'denops.vim'
+on_event = ['VimEnter']
 lua_source = '''require('modules.ddu')'''
 
 [[plugins]]
