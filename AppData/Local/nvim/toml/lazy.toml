@@ -54,3 +54,13 @@ on_event = ['VimEnter']
 [[plugins]]
 repo = 'vim-denops/denops-helloworld.vim'
 on_cmd = 'DenopsHello'
+
+[[plugins]]
+repo = 'skanehira/denops-silicon.vim'
+depends = 'denops.vim'
+hook_source = '''
+let g:silicon_options = {
+\  'background_color': '#eeeaaa',
+\  'theme': 'Solarized (light)',
+\  }
+'''
