@@ -9,7 +9,7 @@ ddu.patch_global({
 	ui = "ff",
 	uiParams = {
 		ff = {
-			-- displaySourceName = "short",
+			displaySourceName = "short",
 			prompt = ">",
 			split = "floating",
 			floatingBorder = "rounded",
@@ -17,13 +17,19 @@ ddu.patch_global({
 			previewFloatingBorder = "rounded",
 			filterSplitDirection = 'floating',
 			startFilter = true,
+		},
+		filer = {
+			split = "floating",
+			sort = "filename",
+			sortTreesFirst = true,
+			toggle = true,
 		}
 	},
-	-- sources = {
-	-- 	{
-	-- 		name = {"file_rec"},
-	-- 	},
-	-- },
+	uiOptions = {
+		filer = {
+			toggle = true,
+		}
+	},
 	sourceOptions = {
 		['_'] = {
 			matchers = {"matcher_substring"}
@@ -34,6 +40,11 @@ ddu.patch_global({
 			defaultAction = "open",
 		}
 	},
+	actionOptions = {
+		narrow = {
+			quit = false,
+		}
+	}
 })
 
 
