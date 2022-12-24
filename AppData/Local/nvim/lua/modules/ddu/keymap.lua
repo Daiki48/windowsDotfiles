@@ -41,6 +41,9 @@ end
 
 
 
+-- ###################################### --
+--      ddu-ui-ff FileType autocmd        --
+-- ###################################### --
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {"ddu-ff"},
 	callback = function() return M.ddu_ff_setting() end,
@@ -51,11 +54,17 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function() return M.ddu_ff_filter_setting() end,
 })
 
+-- ###################################### --
+--     ddu-ui-filer FileType autocmd      --
+-- ###################################### --
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {"ddu-filer"},
 	callback = function() return M.ddu_filer_setting() end,
 })
 
 
+-- ###################################### --
+--            starting keymap             --
+-- ###################################### --
 vim.keymap.set("n", "ff", function() return tools.find_files() end)
 vim.keymap.set("n", ";f", function() return tools.filer() end)
