@@ -4,8 +4,8 @@ if (not status) then return end
 treesitter.setup {
 	ensure_installed = {
 		"html",
-		"lua",
-		"vim",
+		-- "lua",
+		-- "vim",
 		"typescript",
 		"javascript",
 		"toml",
