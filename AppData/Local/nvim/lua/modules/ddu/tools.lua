@@ -20,19 +20,6 @@ M.filer = function ()
 	ddu.start({
 		name = "filer",
 		ui = "filer",
-		resume = true,
-		-- sync = true,
-		uiParams = {
-			filer = {
-				split = "floating",
-				toggle = true,
-			}
-		},
-		uiOptions = {
-			filer = {
-				toggle = true,
-			}
-		},
 		sources = {
 			{
 				name = "file",
