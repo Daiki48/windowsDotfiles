@@ -17,6 +17,7 @@ local ddu_filer = {
 M.ddu_ff_setting = function ()
 	vim.keymap.set("n", "<CR>", function() return ddu_ff.do_action("itemAction") end, { buffer = 0 })
 	vim.keymap.set("n", "i", function() return ddu_ff.do_action("openFilterWindow") end, { buffer = 0 })
+	vim.keymap.set("n", "p", function() return ddu_ff.do_action("preview") end, { buffer = 0 })
 	vim.keymap.set("n", "q", function() return ddu_ff.do_action("quit") end, { buffer = 0 })
 	vim.keymap.set("n", "<ESC>", function() return ddu_ff.do_action("quit") end, { buffer = 0 })
 end
@@ -99,7 +100,8 @@ vim.api.nvim_create_autocmd("FileType", {
 -- ###################################### --
 --            starting keymap             --
 -- ###################################### --
-vim.keymap.set("n", "ff", function() return tools.find_files() end, { buffer = 0 })
-vim.keymap.set("n", ";f", function() return tools.filer() end, { buffer = 0 })
+vim.keymap.set("n", "ff", function() return tools.find_files() end)
+vim.keymap.set("n", ";;", function() return tools.filer() end)
+vim.keymap.set("n", "DU", "<cmd>Ddu dein_update<CR>")
 -- vim.keymap.set("n", "DU", function() return tools.dein_update() end, { buffer = 0 })
-vim.keymap.set("n", "DU", "<cmd>Ddu dein_update<CR>", { buffer = 0 })
+-- vim.keymap.set("n", "DU", "<cmd>Ddu dein_update -ui-param-winHeight=20 -ui-param-winRow=2 -ui-param-winWidth=60 -ui-param-winCol=10<CR>", { buffer = 0 })
