@@ -7,8 +7,12 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'wsdjeg/dein-ui.vim'
 
+# [[plugins]]
+# repo = 'haya14busa/dein-command.vim'
+
 [[plugins]]
 repo = 'Daiki48/coolnessFlair.vim'
+rev = 'develop'
 hook_add = '''
 colorscheme coolnessFlair
 '''
@@ -36,3 +40,5 @@ lua_add = '''require('modules.mason')'''
 repo = 'williamboman/mason-lspconfig.nvim'
 on_source = 'williamboman/mason.nvim'
 
+# [[plugins]]
+# repo = 'vim-denops/denops.vim'
