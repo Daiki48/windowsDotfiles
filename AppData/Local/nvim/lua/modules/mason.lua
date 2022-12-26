@@ -5,6 +5,9 @@ if (not status2) then return end
 
 mason.setup({
 	PATH = "prepend",
+	ui = {
+		border = "rounded"
+	}
 })
 
 lspconfig.setup {
