@@ -16,6 +16,10 @@ lua_source = '''require('modules.ddu')'''
 repo = 'Shougo/ddu-commands.vim'
 on_source = 'ddu.vim'
 
+[[plugins]]
+repo = 'ryota2357/ddu-column-icon_filename'
+on_source = 'ddu.vim'
+
 ## ================================== ##
 ##             ddu-ui-ff              ##
 ## ================================== ##
@@ -42,12 +46,7 @@ on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-ui-filer'
-# depends = ['ddu.vim', 'denops.vim']
 on_source = 'ddu.vim'
-# lua_add = '''require("modules.ddu.filer-keymap")'''
-# lua_source = '''require("modules.ddu.config")'''
-# [plugins.ftplugin]
-# ddu-filer = '''lua require("modules.ddu.filer-keymap")'''
 
 [[plugins]]
 repo = 'Shougo/ddu-source-file'
