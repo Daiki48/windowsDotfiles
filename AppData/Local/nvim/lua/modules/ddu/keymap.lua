@@ -58,6 +58,9 @@ M.ddu_filer_setting = function ()
 			ddu_filer.do_action("itemAction", { name = "open" })
 		end
 	end, { buffer = 0 })
+	vim.keymap.set("n", "h", function ()
+		return ddu_filer.do_action("itemAction", { name = "narrow", params = { path = ".." } })
+	end, { buffer = 0 })
 	vim.keymap.set("n", "<C-h>", function() return ddu_filer.do_action("collapseItem") end, { buffer = 0 })
 	vim.keymap.set("n", "<C-l>", function() return ddu_filer.do_action("expandItem", { mode = "toggle" }) end, { buffer = 0 })
 
