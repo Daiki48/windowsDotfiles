@@ -34,11 +34,7 @@ end
 
 M.dein_update = function ()
 	ddu.start({
-		name = "dein_update",
-		-- ui = "dein_update",
-		uiParams = {
-			winWidth = 100,
-		},
+		name = "dein_plugin_update",
 	})
 end
 
