@@ -1,5 +1,6 @@
 local ddu = {
 	patch_global = vim.fn["ddu#custom#patch_global"];
+	patch_local = vim.fn["ddu#custom#patch_local"];
 	alias = vim.fn["ddu#custom#alias"];
 }
 
@@ -30,10 +31,6 @@ ddu.patch_global({
 				prompt = "DduUiFfPrompt",
 				selected = "DduUiFfSelected",
 			},
-			-- winRow = win_row,
-			-- winCol = win_col,
-			-- winHeight = win_height - 1,
-
 		},
 		filer = {
 			split = "floating",
@@ -44,7 +41,7 @@ ddu.patch_global({
 				floating = "DduUiFilerFloating",
 				selected = "DduUiFilerSelected"
 			},
-		}
+		},
 	},
 	uiOptions = {
 		filer = {
@@ -55,9 +52,9 @@ ddu.patch_global({
 		['_'] = {
 			matchers = {"matcher_substring"}
 		},
-		dein_update = {
-			matchers = {"matcher_dein_update"},
-		},
+		-- dein_update = {
+		-- 	matchers = {"matcher_dein_update"},
+		-- },
 		file = {
 			columns = {"icon_filename"},
 		},
@@ -66,14 +63,45 @@ ddu.patch_global({
 		file = {
 			defaultAction = "open",
 		},
-		dein_update = {
-			defaultAction = "viewDiff",
-		}
+		-- dein_update = {
+		-- 	defaultAction = "viewDiff",
+		-- }
 	},
 	actionOptions = {
 		narrow = {
 			quit = false,
 		},
+		-- echo = {
+		-- 	quit = false,
+		-- },
+		-- echoDiff = {
+		-- 	quit = false,
+		-- },
+	},
+	filterParams = {
+		matcher_substring = {
+			highlightMatched = "DduUiFfFilterMatch",
+		}
+	},
+})
+
+ddu.patch_local("dein_plugin_update", {
+	uiParams = {
+		ff = {
+			startFilter = false,
+		},
+	},
+	sources = {
+		{
+			name = "dein_update",
+		}
+	},
+	sourceOptions = {
+		dein_update = {
+			matchers = {"matcher_dein_update"},
+		},
+	},
+	actionOptions = {
 		echo = {
 			quit = false,
 		},
@@ -81,10 +109,10 @@ ddu.patch_global({
 			quit = false,
 		},
 	},
-	filterParams = {
-		matcher_substring = {
-			highlightMatched = "DduUiFfFilterMatch",
-		}
+	kindOptions = {
+		dein_update = {
+			defaultAction = "viewDiff",
+		},
 	},
 })
 
