@@ -52,9 +52,6 @@ ddu.patch_global({
 		['_'] = {
 			matchers = {"matcher_substring"}
 		},
-		-- dein_update = {
-		-- 	matchers = {"matcher_dein_update"},
-		-- },
 		file = {
 			columns = {"icon_filename"},
 		},
@@ -63,20 +60,11 @@ ddu.patch_global({
 		file = {
 			defaultAction = "open",
 		},
-		-- dein_update = {
-		-- 	defaultAction = "viewDiff",
-		-- }
 	},
 	actionOptions = {
 		narrow = {
 			quit = false,
 		},
-		-- echo = {
-		-- 	quit = false,
-		-- },
-		-- echoDiff = {
-		-- 	quit = false,
-		-- },
 	},
 	filterParams = {
 		matcher_substring = {
