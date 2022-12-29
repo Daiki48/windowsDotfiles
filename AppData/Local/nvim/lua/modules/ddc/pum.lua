@@ -15,8 +15,12 @@ pum.set_option({
 	},
 	highlight_columns = {
 		kind = "PreProc",
+		abbr = "String",
+		menu = "MoreMsg",
 	},
 	highlight_matches = "Search",
 	item_orders = {"kind", "abbr", "menu"},
+	padding = true,
+	scrollbar_char = "⇳",
 })
 
