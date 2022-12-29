@@ -1,10 +1,11 @@
 M = {}
 
 local ddc = {
-	patch_global = vim.fn["ddc#custom#patch_global"];
+	global = vim.fn["ddc#custom#patch_global"];
+	filetype = vim.fn["ddc#custom#patch_filetype"];
 }
 
-ddc.patch_global({
+ddc.global({
 	ui = "pum",
 	autoCompleteEvents = { 'InsertEnter', 'TextChangedI', 'TextChangedP', 'CmdlineChanged' },
 	sources = {
@@ -13,6 +14,7 @@ ddc.patch_global({
 		"buffer",
 		"cmdline",
 		"cmdline-history",
+		"file",
 	},
 	sourceOptions = {
 		['_'] = {
@@ -40,6 +42,11 @@ ddc.patch_global({
 		['cmdline-history'] = {
 			mark = "CL-History",
 		},
+		['file'] = {
+			mark = "File",
+			isVolatile = true,
+			forceCompletionPattern = "\\S/\\S*",
+		}
 	},
 	sourceParams = {
 		['around'] = {
@@ -95,3 +102,15 @@ ddc.patch_global({
 	}
 })
 
+ddc.filetype({"ps1", "dosbatch", "autohotkey", "registry"}, {
+	sourceOptions = {
+		file = {
+			forceCompletionPattern = "\\S\\\\S*",
+		},
+	},
+	sourceParams = {
+		file = {
+			mode = "win32",
+		},
+	},
+})
