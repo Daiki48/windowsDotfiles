@@ -15,6 +15,7 @@ ddc.global({
 		"cmdline",
 		"cmdline-history",
 		"file",
+		"input",
 	},
 	sourceOptions = {
 		['_'] = {
@@ -30,23 +31,31 @@ ddc.global({
 		},
 		['nvim-lsp'] = {
 			mark = "Lsp",
+			isVolatile = true,
 			forceCompletionPattern = "\\.\\w*|:\\w*|->\\\\w*",
 			minAutoCompleteLength = 1,
 		},
 		['buffer'] = {
 			mark = "Buffer",
+			isVolatile = true,
 		},
 		['cmdline'] = {
 			mark = "CmdLine",
+			isVolatile = true,
 		},
 		['cmdline-history'] = {
 			mark = "CL-History",
+			isVolatile = true,
 		},
 		['file'] = {
 			mark = "File",
 			isVolatile = true,
 			forceCompletionPattern = "\\S/\\S*",
-		}
+		},
+		['input'] = {
+			mark = "Input",
+			isVolatile = true,
+		},
 	},
 	sourceParams = {
 		['around'] = {
