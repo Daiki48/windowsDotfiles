@@ -16,15 +16,19 @@ ddc.patch_global({
 	},
 	sourceOptions = {
 		['_'] = {
-			matchers = {"matcher_head"},
-			sorters = {"sorter_rank"},
+			matchers = {"matcher_fuzzy"},
+			sorters = {"sorter_fuzzy"},
+			converters = {"converter_fuzzy"},
+			maxItems = 4,
 		},
 		['around'] = {
 			mark = "Around",
+			isVolatile = true,
+			maxItems = 2,
 		},
 		['nvim-lsp'] = {
 			mark = "Lsp",
-			forceCompletionPattern = "\\.\\w*|:\\w*|->\\w*",
+			forceCompletionPattern = "\\.\\w*|:\\w*|->\\\\w*",
 			minAutoCompleteLength = 1,
 		},
 		['buffer'] = {
@@ -77,5 +81,17 @@ ddc.patch_global({
 			forceCollect = true,
 		},
 	},
+	filterParams = {
+		-- matcher_fuzzy = {
+		-- 	splitMode = "word",
+		-- },
+		converter_fuzzy = {
+			hlGroup = "Question",
+		},
+	},
+	backspaceCompletion = true,
+	cmdlineSources = {
+		[':'] = { "cmdline", "cmdline-history", "around" },
+	}
 })
 
