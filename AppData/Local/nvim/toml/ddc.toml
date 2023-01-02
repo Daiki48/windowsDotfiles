@@ -109,3 +109,19 @@ on_source = 'ddc.vim'
 # hook_source = '''
 # call signature_help#enable()
 # '''
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
+##             ddc snippet            ##
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_source = 'ddc.vim'
+depends = ['neosnippet-snippets']
+hook_add = '''
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory = expand('$HOME/AppData/Local/nvim/snippets')
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'

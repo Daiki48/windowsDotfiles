@@ -9,6 +9,7 @@ ddc.global({
 	ui = "pum",
 	autoCompleteEvents = { 'InsertEnter', 'TextChangedI', 'TextChangedP', 'CmdlineChanged' },
 	sources = {
+		"neosnippet",
 		"around",
 		"nvim-lsp",
 		"buffer",
@@ -22,6 +23,11 @@ ddc.global({
 			matchers = {"matcher_fuzzy"},
 			sorters = {"sorter_fuzzy"},
 			converters = {"converter_fuzzy"},
+			maxItems = 3,
+		},
+		['neosnippet'] = {
+			mark = "Snip",
+			isVolatile = true,
 			maxItems = 4,
 		},
 		['around'] = {
@@ -34,6 +40,7 @@ ddc.global({
 			isVolatile = true,
 			forceCompletionPattern = "\\.\\w*|:\\w*|->\\\\w*",
 			minAutoCompleteLength = 1,
+			maxItems = 4,
 		},
 		['buffer'] = {
 			mark = "Buffer",
