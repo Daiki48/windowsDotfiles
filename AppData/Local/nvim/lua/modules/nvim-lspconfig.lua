@@ -64,16 +64,20 @@ require('lspconfig')['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
+require('lspconfig')['clangd'].setup{
+	on_attach = on_attach,
+	flags = lsp_flags,
+}
 -- require('lspconfig')['csharp_ls'].setup{
 -- 	on_attach = on_attach,
 -- 	flags = lsp_flags,
 --   cmd = { 'csharp-ls' },
 -- 	filetypes = { "cs" },
 -- }
--- require('lspconfig')['omnisharp'].setup{
--- 	on_attach = on_attach,
--- 	flags = lsp_flags,
--- 	cmd = { "dotnet" },
+require('lspconfig')['omnisharp'].setup{
+	on_attach = on_attach,
+	flags = lsp_flags,
+	-- cmd = { "dotnet" },
 	-- cmd = { "dotnet", "/path/to/omnisharp/OmniSharp.dll" },
 	-- enable_editorconfig_support = true,
 	-- enable_ms_build_load_projects_on_demand = false,
@@ -83,4 +87,4 @@ require('lspconfig')['rust_analyzer'].setup{
 	-- enable_import_completion = false,
 	-- sdk_include_prereleases = true,
 	-- analyze_open_documents_only = false,
--- }
+}
