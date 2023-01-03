@@ -13,6 +13,7 @@ ddc.global({
 		"around",
 		"nvim-lsp",
 		"buffer",
+		"nvim-lua",
 		"cmdline",
 		"cmdline-history",
 		"file",
@@ -61,6 +62,10 @@ ddc.global({
 		},
 		['input'] = {
 			mark = "Input",
+			isVolatile = true,
+		},
+		['nvim-lua'] = {
+			mark = "Lua",
 			isVolatile = true,
 		},
 	},

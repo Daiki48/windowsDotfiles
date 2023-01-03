@@ -65,6 +65,10 @@ on_source = 'ddc.vim'
 repo = 'Shougo/ddc-source-input'
 on_source = 'ddc.vim'
 
+[[plugins]]
+repo = 'Shougo/ddc-source-nvim-lua'
+on_source = 'ddc.vim'
+
 # [[plugins]]
 # repo = 'tani/ddc-path'
 # on_source = 'ddc.vim'
