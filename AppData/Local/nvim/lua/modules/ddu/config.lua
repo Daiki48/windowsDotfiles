@@ -77,6 +77,8 @@ ddu.patch_local("dein_plugin_update", {
 	uiParams = {
 		ff = {
 			startFilter = false,
+			winCol = 16,
+			winWidth = 70,
 		},
 	},
 	sources = {
