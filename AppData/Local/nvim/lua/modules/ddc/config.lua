@@ -7,6 +7,7 @@ local ddc = {
 
 ddc.global({
 	ui = "pum",
+	completionMenu = "pum.vim",
 	autoCompleteEvents = { 'InsertEnter', 'TextChangedI', 'TextChangedP' },
 	sources = {
 		"neosnippet",
@@ -24,6 +25,7 @@ ddc.global({
 			matchers = {"matcher_fuzzy"},
 			sorters = {"sorter_fuzzy"},
 			converters = {"converter_fuzzy"},
+			ignoreCase = true,
 			maxItems = 3,
 		},
 		['neosnippet'] = {
