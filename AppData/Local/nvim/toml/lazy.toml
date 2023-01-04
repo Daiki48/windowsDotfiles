@@ -66,3 +66,7 @@ let g:silicon_options = {
 \  'theme': 'Solarized (light)',
 \  }
 '''
+
+[[plugins]]
+repo = 'dstein64/vim-startuptime'
+on_cmd = 'StartupTime'
