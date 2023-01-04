@@ -9,7 +9,7 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 depends = ['denops.vim', 'pum.vim']
-on_event = ['VimEnter']
+on_event = ['InsertEnter']
 lua_source = '''require("modules.ddc")'''
 
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ##
