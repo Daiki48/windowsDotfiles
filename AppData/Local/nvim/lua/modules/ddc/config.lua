@@ -7,7 +7,7 @@ local ddc = {
 
 ddc.global({
 	ui = "pum",
-	autoCompleteEvents = { 'InsertEnter', 'TextChangedI', 'TextChangedP', 'CmdlineChanged' },
+	autoCompleteEvents = { 'InsertEnter', 'TextChangedI', 'TextChangedP' },
 	sources = {
 		"neosnippet",
 		"around",
