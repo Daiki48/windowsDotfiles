@@ -19,7 +19,7 @@ pum.set_option({
 		menu = "MoreMsg",
 	},
 	highlight_matches = "Search",
-	item_orders = {"kind", "abbr", "menu"},
+	item_orders = {"abbr", "kind", "menu"},
 	padding = true,
 	scrollbar_char = "⇳",
 })
