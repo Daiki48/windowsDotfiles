@@ -8,7 +8,7 @@ lua_source = '''require('modules.fidget')'''
 
 [[plugins]]
 repo = 'ray-x/lsp_signature.nvim'
-on_event = ['BufRead']
+on_event = ['InsertEnter']
 on_source = 'neovim/nvim-lspconfig'
 lua_source = '''require('modules.lsp_signature')'''
 
@@ -29,7 +29,8 @@ lua_source = '''require('modules.nvim-autopairs')'''
 
 [[plugins]]
 repo = 'windwp/nvim-ts-autotag'
-on_source = 'nvim-treesitter'
+# on_event = ['InsertEnter']
+# on_source = 'nvim-treesitter'
 lua_source = '''require('modules.nvim-ts-autotag')'''
 
 # [[plugins]]
