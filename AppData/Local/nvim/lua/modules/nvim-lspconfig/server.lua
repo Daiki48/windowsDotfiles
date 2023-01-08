@@ -1,6 +1,7 @@
 local tools = require("modules.nvim-lspconfig.tools")
+local lspconfig = require('lspconfig')
 
-require('lspconfig')['sumneko_lua'].setup{
+lspconfig['sumneko_lua'].setup{
 	on_attach = tools.on_attach,
 	flags = tools.lsp_flags,
 	settings = {
@@ -16,24 +17,36 @@ require('lspconfig')['sumneko_lua'].setup{
 	}
 }
 
-require('lspconfig')['tsserver'].setup{
-    on_attach = tools.on_attach,
-    flags = tools.lsp_flags,
-}
-require('lspconfig')['rust_analyzer'].setup{
-    on_attach = tools.on_attach,
-    flags = tools.lsp_flags,
-    -- Server-specific settings...
-    settings = {
-      ["rust-analyzer"] = {}
-    }
-}
-require('lspconfig')['clangd'].setup{
+lspconfig['tsserver'].setup{
+	root_dir = lspconfig.util.root_pattern("package.json"),
 	on_attach = tools.on_attach,
 	flags = tools.lsp_flags,
+	init_options = {},
 }
 
--- require('lspconfig')['csharp_ls'].setup{
+lspconfig['denols'].setup{
+	root_dir = lspconfig.util.root_pattern("deno.json"),
+	on_attach = tools.on_attach,
+	flags = tools.lsp_flags,
+	init_options = {},
+}
+
+lspconfig['rust_analyzer'].setup{
+	on_attach = tools.on_attach,
+	flags = tools.lsp_flags,
+	-- Server-specific settings...
+	settings = {
+		["rust-analyzer"] = {}
+	}
+}
+
+lspconfig['clangd'].setup{
+	on_attach = tools.on_attach,
+	flags = tools.lsp_flags,
+	init_options = {},
+}
+
+-- lspconfig['csharp_ls'].setup{
 -- 	on_attach = tools.on_attach,
 -- 	flags = tools.lsp_flags,
 --   cmd = { 'csharp-ls' },
@@ -41,7 +54,7 @@ require('lspconfig')['clangd'].setup{
 -- }
 
 local omnisharp_path = vim.fn.glob(vim.fn.stdpath('data') .. '/mason/') .. 'packages/omnisharp/OmniSharp.dll'
-require('lspconfig')['omnisharp'].setup{
+lspconfig['omnisharp'].setup{
 	on_attach = tools.on_attach,
 	flags = tools.lsp_flags,
 	cmd = { "dotnet", omnisharp_path },
