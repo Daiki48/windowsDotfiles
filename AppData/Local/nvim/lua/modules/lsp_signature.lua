@@ -1,7 +1,7 @@
 local status, signature = pcall(require, 'lsp_signature')
 if (not status) then return end
 
-local signature_setup = require "lsp_signature".setup()
+local signature_setup = signature.setup()
 
 local deno_setup = {
 	on_attach = function(client, bufnr)
