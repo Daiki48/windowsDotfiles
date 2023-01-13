@@ -13,6 +13,7 @@ treesitter.setup {
 		"css",
 		"json",
 		"yaml",
+		"markdown",
 	},
 	indent = {
 		-- disable = true,
