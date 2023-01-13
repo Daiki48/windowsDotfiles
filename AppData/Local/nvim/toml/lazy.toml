@@ -33,11 +33,11 @@ repo = 'windwp/nvim-ts-autotag'
 # on_source = 'nvim-treesitter'
 lua_source = '''require('modules.nvim-ts-autotag')'''
 
-# [[plugins]]
-# repo = 'nvim-treesitter/nvim-treesitter'
-# on_event = ['BufRead']
-# hook_post_update = 'TSUpdate'
-# lua_source = '''require('modules.treesitter')'''
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+on_event = ['BufRead']
+hook_post_update = 'TSUpdate'
+lua_source = '''require('modules.treesitter')'''
 
 [[plugins]]
 repo = 'norcalli/nvim-colorizer.lua'
@@ -71,3 +71,4 @@ let g:silicon_options = {
 [[plugins]]
 repo = 'dstein64/vim-startuptime'
 on_cmd = 'StartupTime'
+
