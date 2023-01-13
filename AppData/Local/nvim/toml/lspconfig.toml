@@ -4,5 +4,5 @@
 ## *************************** ##
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
-on_event = ['InsertEnter']
+on_event = ['InsertEnter', 'BufRead']
 lua_source = '''require('modules.nvim-lspconfig')'''
