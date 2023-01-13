@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 return {
   default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh' },
-  hide_tab_bar_if_only_one_tab = true,
+  -- hide_tab_bar_if_only_one_tab = true,
   window_background_opacity = 0.8,
   window_padding = {
 	  left = 0,
