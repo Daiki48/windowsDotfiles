@@ -128,4 +128,4 @@ saga.init_lsp_saga {
 	}
 }
 
-
+vim.wo.winbar = require('lspsaga.symbolwinbar'):get_winbar()
