@@ -4,8 +4,8 @@ if (not status) then return end
 treesitter.setup {
 	ensure_installed = {
 		"html",
-		-- "lua",
-		-- "vim",
+		"lua",
+		"vim",
 		"typescript",
 		"javascript",
 		"toml",
@@ -14,6 +14,26 @@ treesitter.setup {
 		"json",
 		"yaml",
 		"markdown",
+	},
+	autotag = {
+		enable = true,
+		filetypes = {
+			"html",
+			"xml",
+			"javascript",
+			"typescript",
+			"javascriptreact",
+			"typescriptreact",
+			"svelte",
+			"vue",
+			"tsx",
+			"jsx",
+			"rescript",
+			"markdown",
+			"cs",
+			"rust",
+			"razor",
+		},
 	},
 	indent = {
 		-- disable = true,
