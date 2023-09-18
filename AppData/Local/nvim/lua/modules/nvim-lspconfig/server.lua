@@ -1,7 +1,7 @@
 local tools = require("modules.nvim-lspconfig.tools")
 local lspconfig = require('lspconfig')
 
-lspconfig['sumneko_lua'].setup{
+lspconfig['lua_ls'].setup{
 	on_attach = tools.on_attach,
 	flags = tools.lsp_flags,
 	settings = {
