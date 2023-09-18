@@ -7,7 +7,6 @@ local ddc = {
 
 ddc.global({
 	ui = "pum",
-	completionMenu = "pum.vim",
 	autoCompleteEvents = { 'InsertEnter', 'TextChangedI', 'TextChangedP' },
 	sources = {
 		"neosnippet",
