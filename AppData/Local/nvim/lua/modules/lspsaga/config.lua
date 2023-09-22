@@ -122,10 +122,10 @@ saga.setup({
 })
 
 
-saga.init_lsp_saga {
-	server_filetype_map = {
-		typescript = 'typescript'
-	}
-}
+-- saga.init_lsp_saga {
+-- 	server_filetype_map = {
+-- 		typescript = 'typescript'
+-- 	}
+-- }
 
 vim.wo.winbar = require('lspsaga.symbolwinbar'):get_winbar()
