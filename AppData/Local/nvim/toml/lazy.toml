@@ -4,6 +4,7 @@
 [[plugins]]
 repo = 'j-hui/fidget.nvim'
 on_event = ['BufRead']
+rev = "legacy"
 lua_source = '''require('modules.fidget')'''
 
 [[plugins]]
