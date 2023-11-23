@@ -1,1 +1,2 @@
-require('daiki')
+require('base')
+require('brackets')
